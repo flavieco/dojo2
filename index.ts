@@ -15,7 +15,7 @@ async function handler(_req: Request): Promise<Response> {
 
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
-  const path=new URL (_req.url).pathname
+  const path=new URL (_req.url).pathname.slice(1)
 
   const similarityRequestBody = JSON.stringify({
     word1: "centrale",
